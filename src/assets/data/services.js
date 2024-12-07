@@ -1,130 +1,130 @@
 const services = [
     {
-        slug: "construction-residentielle",
-        title: "Construction Résidentielle",
-        description: "Des maisons sur-mesure adaptées à vos besoins et à votre budget.",
-        detailedDescription: "Nous concevons et construisons des maisons personnalisées qui reflètent votre style de vie unique, en utilisant les dernières technologies et matériaux de construction.",
+        slug: "conception-architecturale",
+        title: "Conception Architecturale",
+        description: "Création de plans innovants et fonctionnels adaptés à vos besoins spécifiques.",
+        detailedDescription: "Nous offrons des services de conception architecturale de pointe, transformant vos idées en designs réalisables et innovants qui combinent esthétique, fonctionnalité et durabilité.",
         advantages: [
-            "Design personnalisé",
-            "Efficacité énergétique",
-            "Qualité de construction supérieure",
-            "Suivi personnalisé du projet"
-        ],
-        process: [
-            "Consultation initiale",
-            "Conception et plans détaillés",
-            "Approbation et permis",
-            "Construction",
-            "Finitions et livraison"
-        ],
-        bgColor: "bg-blue-50",
-        accentColor: "text-blue-600"
-    },
-    {
-        slug: "projets-commerciaux",
-        title: "Projets Commerciaux",
-        description: "Réalisation de bâtiments commerciaux modernes et fonctionnels.",
-        detailedDescription: "Solutions de construction complètes pour les entreprises, en créant des espaces de travail innovants et adaptés à vos besoins professionnels.",
-        advantages: [
-            "Conception moderne",
+            "Designs personnalisés et créatifs",
+            "Approche innovante et technologique",
             "Optimisation de l'espace",
-            "Solutions technologiques intégrées",
-            "Respect des normes de sécurité"
+            "Conformité aux normes réglementaires"
         ],
         process: [
-            "Analyse des besoins",
-            "Planification stratégique",
-            "Conception architecturale",
-            "Exécution du projet",
-            "Livrables et suivi"
+            "Consultation initiale et collecte des besoins",
+            "Études préliminaires et esquisses",
+            "Développement des plans détaillés",
+            "Validation et ajustements",
+            "Livraison des plans finaux"
         ],
-        bgColor: "bg-green-50",
-        accentColor: "text-green-600"
+        bgColor: "bg-indigo-50",
+        accentColor: "text-indigo-600"
     },
     {
-        slug: "travaux-publics",
-        title: "Travaux Publics",
-        description: "Infrastructure et aménagement urbain de haute qualité.",
-        detailedDescription: "Expertise dans les projets d'infrastructure publique, contribuant au développement durable et à l'amélioration des espaces communautaires.",
+        slug: "etude-de-projets",
+        title: "Étude de Projets",
+        description: "Analyse approfondie et conseil stratégique pour la réussite de vos projets de construction.",
+        detailedDescription: "Nous réalisons des études de projets complètes, offrant une analyse stratégique détaillée pour minimiser les risques et maximiser le potentiel de vos projets de construction.",
         advantages: [
-            "Expertise technique",
-            "Solutions durables",
-            "Respect de l'environnement",
-            "Innovation technologique"
+            "Analyse de faisabilité approfondie",
+            "Gestion des risques anticipée",
+            "Optimisation financière",
+            "Conseil stratégique personnalisé"
         ],
         process: [
-            "Étude de faisabilité",
-            "Conception technique",
-            "Planification environnementale",
-            "Exécution",
-            "Contrôle qualité"
+            "Analyse préliminaire du projet",
+            "Évaluation technique et économique",
+            "Identification des opportunités et défis",
+            "Recommandations stratégiques",
+            "Rapport détaillé et recommandations"
+        ],
+        bgColor: "bg-teal-50",
+        accentColor: "text-teal-600"
+    },
+    {
+        slug: "construction-btp",
+        title: "Travaux de Bâtiment et Travaux Publics",
+        description: "Réalisation complète de tous types de constructions, du résidentiel à l'industriel.",
+        detailedDescription: "Notre expertise en BTP couvre une large gamme de projets, offrant des solutions de construction complètes, de la conception à la réalisation finale dans tous les secteurs.",
+        advantages: [
+            "Expertise multisectorielle",
+            "Qualité de construction supérieure",
+            "Respect des délais et budgets",
+            "Solutions techniques innovantes"
+        ],
+        process: [
+            "Analyse des besoins spécifiques",
+            "Planification détaillée",
+            "Préparation du terrain",
+            "Exécution des travaux",
+            "Contrôle qualité et réception"
         ],
         bgColor: "bg-yellow-50",
         accentColor: "text-yellow-600"
     },
     {
-        slug: "renovation",
-        title: "Rénovation",
-        description: "Transformation et modernisation de vos espaces existants.",
-        detailedDescription: "Rénovations complètes qui transforment vos espaces, en combinant esthétique moderne et fonctionnalité pratique.",
+        slug: "assistance-conseils",
+         title: "Assistance et Conseils",
+        description: "Accompagnement personnalisé à chaque étape de votre projet de construction.",
+        detailedDescription: "Nous proposons un accompagnement sur-mesure, vous guidant expertement à travers chaque phase de votre projet de construction, de la conception initiale à la livraison finale.",
         advantages: [
-            "Modernisation complète",
-            "Amélioration de la valeur",
-            "Solutions sur-mesure",
-            "Préservation du caractère original"
+            "Conseil personnalisé",
+            "Support technique complet",
+            "Résolution proactive des problèmes",
+            "Communication transparente"
         ],
         process: [
-            "Évaluation initiale",
-            "Conception conceptuelle",
-            "Planification détaillée",
-            "Rénovation",
-            "Finitions et décoration"
+            "Définition des objectifs du projet",
+            "Diagnostic et recommandations",
+            "Suivi et coordination",
+            "Gestion des interventions",
+            "Bilan et optimisation continue"
+        ],
+        bgColor: "bg-green-50",
+        accentColor: "text-green-600"
+    },
+    {
+        slug: "topographie",
+        title: "Topographie",
+        description: "Relevés précis et études de terrain pour une planification optimale de vos projets.",
+        detailedDescription: "Nos services de topographie utilisent les technologies les plus avancées pour fournir des relevés précis, essentiels à la planification et à la réalisation de vos projets de construction.",
+        advantages: [
+            "Précision des relevés",
+            "Technologies de pointe",
+            "Analyse détaillée du terrain",
+            "Support à la décision"
+        ],
+        process: [
+            "Collecte des données initiales",
+            "Relevés terrain avec équipements de précision",
+            "Analyse et traitement des données",
+            "Cartographie détaillée",
+            "Rapport et recommandations"
         ],
         bgColor: "bg-purple-50",
         accentColor: "text-purple-600"
     },
     {
-        slug: "gestion-de-projets",
-        title: "Gestion de Projets",
-        description: "Accompagnement complet de votre projet de la conception à la livraison.",
-        detailedDescription: "Gestion intégrée de projet, assurant une coordination parfaite, une communication transparente et une exécution efficace.",
+        slug: "renovation-rehabilitation",
+        title: "Rénovation et Réhabilitation",
+        description: "Transformation et modernisation de bâtiments existants avec expertise et créativité.",
+        detailedDescription: "Nous offrons des solutions de rénovation complètes qui préservent l'essence originelle de vos bâtiments tout en les modernisant avec des technologies et des designs contemporains.",
         advantages: [
-            "Coordination complète",
-            "Gestion des risques",
-            "Optimisation des coûts",
-            "Respect des délais"
+            "Préservation du patrimoine",
+            "Modernisation technique",
+            "Amélioration énergétique",
+            "Design contemporain"
         ],
         process: [
-            "Définition des objectifs",
-            "Planification stratégique",
-            "Coordination des ressources",
-            "Suivi et reporting",
-            "Clôture et évaluation"
+            "Diagnostic structural",
+            "Conception du projet de rénovation",
+            "Planification des interventions",
+            "Travaux de réhabilitation",
+            "Finitions et mise aux normes"
         ],
-        bgColor: "bg-red-50",
-        accentColor: "text-red-600"
+        bgColor: "bg-blue-50",
+        accentColor: "text-blue-600"
     },
-    {
-        slug: "construction-industrielle",
-        title: "Construction Industrielle",
-        description: "Solutions de construction pour installations industrielles et manufacturières.",
-        detailedDescription: "Conception et construction d'installations industrielles sur-mesure, optimisant l'efficacité et la productivité.",
-        advantages: [
-            "Conception technique avancée",
-            "Conformité réglementaire",
-            "Solutions personnalisées",
-            "Intégration technologique"
-        ],
-        process: [
-            "Analyse des besoins industriels",
-            "Conception technique",
-            "Planification logistique",
-            "Construction spécialisée",
-            "Tests et mise en service"
-        ],
-        bgColor: "bg-gray-50",
-        accentColor: "text-gray-600"
-    }
+    
 ];
-
 export default services;

@@ -1,8 +1,12 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+import aspectRatio from '@tailwindcss/aspect-ratio';
 
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
-    "./index.html", 
+    "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -10,27 +14,27 @@ module.exports = {
       colors: {
         'btp-primary': {
           50: '#e6f2ff',
-          100: '#b3dbff', 
+          100: '#b3dbff',
           300: '#4a90e2',
-          500: '#2c5282', 
+          500: '#2c5282',
           700: '#1a365d',
         },
         'btp-secondary': {
           50: '#f0f4f8',
-          100: '#d9e2ec', 
+          100: '#d9e2ec',
           300: '#9fb3c8',
           500: '#627d98',
           700: '#486581',
         },
         'btp-accent': {
           300: '#f6ad55',
-          500: '#ed8936', 
+          500: '#ed8936',
         },
         'btp-industrial': {
           100: '#f0f0f0',
-          300: '#d3d3d3', 
+          300: '#d3d3d3',
           500: '#808080',
-          700: '#505050', 
+          700: '#505050',
         },
       },
       fontFamily: {
@@ -59,9 +63,9 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio')
+    forms,
+    typography,
+    aspectRatio,
   ],
   variants: {
     extend: {

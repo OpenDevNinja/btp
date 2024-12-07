@@ -8,7 +8,11 @@ import {
     Wrench,
     PlaneTakeoff,
     Factory,
-    ChevronRight
+    ChevronRight,
+    Ruler,
+    Compass,
+    MapPin,
+    Building
 } from 'lucide-react';
 
 const ServicesSection = () => {
@@ -44,47 +48,48 @@ const ServicesSection = () => {
 
     const services = [
         {
-            slug: "construction-residentielle",
-            icon: <Home size={50} className="text-btp-accent-500" />,
-            title: "Construction Résidentielle",
-            description: "Des maisons sur-mesure adaptées à vos besoins et à votre budget.",
-            color: "bg-blue-50"
+            slug: "conception-architecturale",
+            icon: <Ruler size={50} className="text-btp-accent-500" />,
+            title: "Conception Architecturale",
+            description: "Création de plans innovants et fonctionnels adaptés à vos besoins spécifiques.",
+            color: "bg-indigo-50"
         },
         {
-            slug: "projets-commerciaux",
-            icon: <Building2 size={50} className="text-btp-accent-500" />,
-            title: "Projets Commerciaux",
-            description: "Réalisation de bâtiments commerciaux modernes et fonctionnels.",
-            color: "bg-green-50"
+            slug: "etude-de-projets",
+            icon: <Compass size={50} className="text-btp-accent-500" />,
+            title: "Étude de Projets",
+            description: "Analyse approfondie et conseil stratégique pour la réussite de vos projets de construction.",
+            color: "bg-teal-50"
         },
         {
-            slug: "travaux-publics",
+            slug: "construction-btp",
             icon: <HardHat size={50} className="text-btp-accent-500" />,
-            title: "Travaux Publics",
-            description: "Infrastructure et aménagement urbain de haute qualité.",
+            title: "Travaux de Bâtiment et Travaux Publics",
+            description: "Réalisation complète de tous types de constructions, du résidentiel à l'industriel.",
             color: "bg-yellow-50"
         },
         {
-            slug: "renovation",
-            icon: <Wrench size={50} className="text-btp-accent-500" />,
-            title: "Rénovation",
-            description: "Transformation et modernisation de vos espaces existants.",
+            slug: "assistance-conseils",
+            icon: <PlaneTakeoff size={50} className="text-btp-accent-500" />,
+            title: "Assistance et Conseils",
+            description: "Accompagnement personnalisé à chaque étape de votre projet de construction.",
+            color: "bg-green-50"
+        },
+        {
+            slug: "topographie",
+            icon: <MapPin size={50} className="text-btp-accent-500" />,
+            title: "Topographie",
+            description: "Relevés précis et études de terrain pour une planification optimale de vos projets.",
             color: "bg-purple-50"
         },
         {
-            slug: "gestion-de-projets",
-            icon: <PlaneTakeoff size={50} className="text-btp-accent-500" />,
-            title: "Gestion de Projets",
-            description: "Accompagnement complet de votre projet de la conception à la livraison.",
-            color: "bg-red-50"
+            slug: "renovation-rehabilitation",
+            icon: <Building size={50} className="text-btp-accent-500" />,
+            title: "Rénovation et Réhabilitation",
+            description: "Transformation et modernisation de bâtiments existants avec expertise et créativité.",
+            color: "bg-blue-50"
         },
-        {
-            slug: "construction-industrielle",
-            icon: <Factory size={50} className="text-btp-accent-500" />,
-            title: "Construction Industrielle",
-            description: "Solutions de construction pour installations industrielles et manufacturières.",
-            color: "bg-gray-50"
-        }
+      
     ];
 
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Clipboard, Smile, PaintRoller } from 'lucide-react';
-import imgCont from '../assets/image/catalogue/cat2.jpg'
+import imgCont from '../assets/image/img/de.jpg'
 
 const ConstructionServicesPage = () => {
   const imageVariants = {
@@ -105,11 +105,20 @@ const ConstructionServicesPage = () => {
             className="flex flex-col justify-center"
           >
             <h1 className="text-4xl font-display font-bold text-btp-primary-700 mb-4">
-              Nos services de construction et de rénovation
+                QUI SOMMES NOUS ?
             </h1>
             <p className="text-btp-secondary-700 text-lg mb-6">
-              Nous offrons une expérience exceptionnelle pour tous vos projets de construction et de rénovation. Nos équipes expérimentées sont là pour vous guider à chaque étape du processus.
-            </p>
+            SM Entreprise est une entreprise de construction générale spécialisée dans 
+            la construction immobilière et tous les travaux de génie civil.
+             Nous travaillons pour le compte des particuliers, de professionnels 
+             et notre entreprise se développe sur une dynamique de multiples
+              compétence ayant une force de réseau comptant différents partenaires dans le domaine
+              de la construction et génie civil en général.
+              Notre état d'esprit est orienté vers la complémentarité de chacun des acteurs de notre
+               société afin d'acquérir et de renforcer nos compétences techniques.   
+           
+           
+             </p>
             
             <div className="grid grid-cols-2 gap-6">
               {statItems.map((item, index) => (

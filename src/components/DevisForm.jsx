@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 
 
-import sideImage from '../assets/image/catalogue/cat4.jpeg'
+import sideImage from '../assets/image/img/fg.jpeg'
 
 const DevisForm = () => {
   const [formData, setFormData] = useState({

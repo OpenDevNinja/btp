@@ -10,19 +10,34 @@ import {
     PlaneTakeoff, 
     Factory,
     CheckCircle2,
-    ArrowRight
+    ArrowRight,
+    Ruler,
+    Compass,
+    MapPin,
+    Building
 } from 'lucide-react';
 import services from '../assets/data/services';
 import Breadcrumb from '../components/Breadcrumb';
 
-const serviceIcons = {
+/* const serviceIcons = {
     "construction-residentielle": Home,
     "projets-commerciaux": Building2,
     "travaux-publics": HardHat,
     "renovation": Wrench,
     "gestion-de-projets": PlaneTakeoff,
     "construction-industrielle": Factory
+}; */
+
+const serviceIcons = {
+    "conception-architecturale": Ruler,
+    "etude-de-projets": Compass,
+    "construction-btp": HardHat,
+    "assistance-conseils": PlaneTakeoff,
+    "topographie": MapPin,
+    "renovation-rehabilitation": Building,
+    
 };
+
 
 const ServiceDetailPage = () => {
     const { serviceSlug } = useParams();
