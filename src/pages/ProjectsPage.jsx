@@ -14,6 +14,7 @@ import image3 from '../assets/image/image_5.jpg';
 import image4 from '../assets/image/image_10.jpg';
 import image5 from '../assets/image/image_11.jpg';
 import image6 from '../assets/image/image_12.jpg';
+import ProjectsSection from './ProjectsSection';
 
 const ProjectsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
@@ -134,107 +135,7 @@ const ProjectsPage = () => {
     <>
     <Helmet title="Nos Réalisations" subTitle="Découvrez nos projets et nos réalisations" />
     <div className="container mx-auto py-16 px-4">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="text-center mb-12"
-      >
-        <h1 className="text-5xl font-display font-bold text-btp-primary-700 mb-4">
-          Nos Réalisations
-        </h1>
-        <p className="max-w-2xl mx-auto text-btp-secondary-700">
-          Découvrez une sélection de nos projets les plus remarquables, 
-          témoignant de notre expertise et de notre passion pour la construction.
-        </p>
-      </motion.div>
-
-      {/* Filtres de Catégories */}
-     {/* Filtres de Catégories */}
-<motion.div 
-  initial="hidden"
-  animate="visible"
-  variants={{
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.1
-      }
-    }
-  }}
-  className="flex flex-wrap justify-center gap-4 mb-12"
->
-  {projectCategories.map((category) => (
-    <motion.button
-      key={category.name}
-      variants={{
-        hidden: { y: 20, opacity: 0 },
-        visible: { y: 0, opacity: 1 }
-      }}
-      onClick={() => setSelectedCategory(category.name)}
-      className={`
-        flex items-center space-x-2 px-3 py-2 rounded-full text-sm
-        transition-all duration-300 ease-in-out
-        ${selectedCategory === category.name 
-          ? 'bg-btp-primary-500 text-white' 
-          : 'bg-btp-primary-50 text-btp-primary-700 hover:bg-btp-primary-100'
-        }
-      `}
-    >
-      {category.icon}
-      <span className="hidden sm:inline">{category.name}</span>
-      <span className="sm:hidden">{category.name.charAt(0)}</span>
-    </motion.button>
-  ))}
-</motion.div>
-      {/* Grille de Projets */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              delayChildren: 0.3,
-              staggerChildren: 0.2
-            }
-          }
-        }}
-        className="grid md:grid-cols-3 gap-8"
-      >
-        {filteredProjects.map((project) => (
-          <motion.div
-            key={project.id}
-            variants={{
-              hidden: { y: 20, opacity: 0 },
-              visible: { y: 0, opacity: 1 }
-            }}
-            whileHover={{ scale: 1.05 }}
-            className="bg-white rounded-xl overflow-hidden shadow-btp-card"
-          >
-            <img 
-              src={project.image} 
-              alt={project.title} 
-              className="w-full h-64 object-cover"
-            />
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-2">
-                <h3 className="text-xl font-bold text-btp-primary-700">
-                  {project.title}
-                </h3>
-                <span className="text-btp-secondary-700">
-                  {project.year}
-                </span>
-              </div>
-              <p className="text-btp-secondary-700">
-                {project.description}
-              </p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+    <ProjectsSection/>
     </div>
     </>
   );
