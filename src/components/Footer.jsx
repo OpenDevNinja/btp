@@ -21,11 +21,11 @@ const Footer = () => {
   ];
 
   const services = [
-    'Construction Résidentielle',
-    'Projets Commerciaux', 
-    'Travaux Publics',
-    'Rénovation',
-    'Gestion de Projets'
+    'Conception Architecturale',
+    'Étude de Projets', 
+    'Assistance et Conseils',
+    'Topographie',
+    'Rénovation et Réhabilitation'
   ];
 
   return (
@@ -129,7 +129,7 @@ const Footer = () => {
         <div className="border-t border-btp-primary-500 mt-8 pt-6 text-center">
           <p>
             © {new Date().getFullYear()} SM Enterprise. Tous droits réservés.
-            <br />
+          {/*   <br />
             <a 
               href="#" 
               className="hover:text-btp-accent-300 ml-4"
@@ -141,7 +141,7 @@ const Footer = () => {
               className="hover:text-btp-accent-300 ml-4"
             >
               Politique de Confidentialité
-            </a>
+            </a> */}
           </p>
         </div>
       </div>
