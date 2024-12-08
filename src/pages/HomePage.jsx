@@ -6,6 +6,7 @@ import Action from './Action'
 import TestimonialsSection from './TestimonialsSection'
 import FactoryHomePage from './FactoryHomePage'
 import DevisForm from '../components/DevisForm'
+import WhyChooseUs from './WhyChooseUs'
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
   
     <FactoryHomePage />
     <ServicesSection/>
+    <WhyChooseUs/>
     <Action/>
    
     <ProjectsSection/>
