@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Building2, Users, CheckCircle, Target } from 'lucide-react';
 import image1 from '../assets/image/img/de.jpg';
 import Helmet from '../components/Helmet';
+import WhyChooseUs from './WhyChooseUs';
 const AboutSMEntreprise = () => {
   const fadeInVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -72,7 +73,7 @@ const AboutSMEntreprise = () => {
             </div>
           </motion.div>
         </motion.div>
-
+<WhyChooseUs/>
         {/* Section Interlocuteurs Experts */}
         <motion.div 
           initial="hidden"
