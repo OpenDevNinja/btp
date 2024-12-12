@@ -8,6 +8,7 @@ import ServiceDetailPage from './pages/ServiceDetailPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import DevisForm from './pages/Devis';
+import RealisationPage from './pages/RealisationPage';
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
          <Route path="/projects" element={<ProjectsPage />} />
          <Route path="/contact" element={<ContactPage />} />
          <Route path="devis" element={<DevisForm />} />
+         <Route path="realisations" element={<RealisationPage />} />
 
          
         </Route>

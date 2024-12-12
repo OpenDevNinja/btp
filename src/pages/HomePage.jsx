@@ -7,6 +7,7 @@ import TestimonialsSection from './TestimonialsSection'
 import FactoryHomePage from './FactoryHomePage'
 import DevisForm from '../components/DevisForm'
 import WhyChooseUs from './WhyChooseUs'
+import Realisation from './Realisation'
 
 const HomePage = () => {
   return (
@@ -19,9 +20,11 @@ const HomePage = () => {
     <Action/>
    
     <ProjectsSection/>
-    <DevisForm/>
-    <TestimonialsSection/>
 
+    
+    <Realisation/>
+    <DevisForm/>
+ 
         </>
   )
 }

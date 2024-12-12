@@ -1,221 +1,287 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Camera, ArrowRight, X, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Camera, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { motion } from 'framer-motion';
+import image1 from '../assets/image/img/2.jpg';
+import image11 from '../assets/image/img/1.jpg';
 
-// Import your images (ensure paths are correct)
-import image1 from '../assets/image/image_3.jpg';
-import image2 from '../assets/image/image_2.jpg';
-import image3 from '../assets/image/image_5.jpg';
-import image4 from '../assets/image/image_10.jpg';
-import image5 from '../assets/image/image_11.jpg';
-import image6 from '../assets/image/image_12.jpg';
+import image2 from '../assets/image/img/C1.jpg';
+import image21 from '../assets/image/img/C.jpeg';
 
-const ProjectsSection = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [visibleProjects, setVisibleProjects] = useState(3);
-  const [hoveredProject, setHoveredProject] = useState(null);
+import image3 from '../assets/image/img/11.jpg';
+import image31 from '../assets/image/img/22.jpg';
 
-  const projects = [
-    {
-      desciption: "Résidence Moderne",
-      image: image2,
-      galerie: [ image2, image3, image4, image5, image6],
-    },
-    {
-      desciption: "Centre Commercial",
-      
-      image: image3,
-      galerie: [ image2, image3, image4, image5, image6],
-     },
-    {
-      desciption: "Rénovation Urbaine",
-     
-      image: image6,
-      galerie: [ image3, image2, image4, image5, image6],
-          },
-    {
-      desciption: "Infrastructure Moderne",
-      
-      image: image4,
-      galerie: [image4, image2, image4, image5, image6],
-      },
-    {
-      desciption: "Complexe Résidentiel",
-   
-      image: image5,
-      galerie: [ image5, image2, image4, image5, image6],
-      
+import image4 from '../assets/image/img/B.jpeg';
+import image41 from '../assets/image/img/B_1.jpg';
+import image42 from '../assets/image/img/B_3.jpg';
+
+import image5 from '../assets/image/img/F_1.jpg';
+import image51 from '../assets/image/img/F_2.jpg';
+import image52 from '../assets/image/img/F_3.jpg';
+
+import image6 from '../assets/image/img/v1A1.jpg';
+import image61 from '../assets/image/img/v1A2.jpg';
+import image62 from '../assets/image/img/v1A3.jpg';
+import image63 from '../assets/image/img/v1A4.jpg';
+import image64 from '../assets/image/img/v1A5.jpg';
+import image65 from '../assets/image/img/v1A6.jpg';
+
+import image7 from '../assets/image/img/D_1.jpg';
+import image71 from '../assets/image/img/D_2.jpg';
+
+import image8 from '../assets/image/img/projet.jpg';
+
+
+
+const GalleryModalCarousel = ({ items }) => {
+  const [selectedItemIndex, setSelectedItemIndex] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (selectedItemIndex !== null) {
+      setCurrentImageIndex(0);
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => {
+          const images = items[selectedItemIndex].images;
+          return (prevIndex + 1) % images.length;
+        });
+      }, 5000);
+
+      return () => clearInterval(interval);
     }
-  ];
+  }, [selectedItemIndex, items]);
 
-  const handleSeeMore = () => {
-    setVisibleProjects(prevVisible => 
-      prevVisible + 3 <= projects.length ? prevVisible + 3 : projects.length
+  const openModal = (index) => {
+    setSelectedItemIndex(index);
+  };
+
+  const closeModal = () => {
+    setSelectedItemIndex(null);
+  };
+
+  const handleNext = () => {
+    const images = items[selectedItemIndex].images;
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrev = () => {
+    const images = items[selectedItemIndex].images;
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100
-      }
-    }
-  };
-
   return (
-    <section className="py-20 bg-gradient-to-br from-btp-primary-50 to-white">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, type: "spring" }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-5xl font-display font-bold text-btp-primary-700 mb-4 tracking-tight">
-            Nos Réalisations
-          </h2>
-          <p className="text-xl text-btp-secondary-500 max-w-2xl mx-auto">
-            Découvrez nos projets innovants qui redéfinissent les espaces et améliorent la qualité de vie
-          </p>
-        </motion.div>
-
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid md:grid-cols-3 gap-8"
-        >
-          {projects.slice(0, visibleProjects).map((project, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              onHoverStart={() => setHoveredProject(index)}
-              onHoverEnd={() => setHoveredProject(null)}
-              className={`relative bg-white rounded-2xl overflow-hidden shadow-btp-hover 
-                transition-all duration-300 transform ${
-                  hoveredProject === index 
-                    ? 'ring-4 ring-btp-accent-500/30' 
-                    : 'ring-0'
-                }`}
-            >
-              <div className="relative group">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-64 object-cover transition-transform duration-300 
-                    group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-10 
-                  group-hover:bg-opacity-20 transition-all duration-300"></div>
-                <motion.button
-                  onClick={() => setSelectedImage(project.image)}
-                  whileTap={{ scale: 0.9 }}
-                  className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm 
-                    text-white p-2 rounded-full hover:bg-white/40 transition-all"
-                >
-                  <Camera size={24} />
-                </motion.button>
-              </div>
-
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <p className= "text-btp-primary-500">
-                    {project.desciption}
-                  </p>
-                 
-                </div>
-               
-              
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {visibleProjects < projects.length && (
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="flex justify-center mt-12"
+    <div className="container mx-auto px-4 py-8">
+      {/* Gallery Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {items.map((item, index) => (
+          <div 
+            key={index} 
+            className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
           >
-            <motion.button
-              onClick={handleSeeMore}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center px-8 py-3 bg-btp-accent-500 
-                text-white rounded-full font-semibold text-lg 
-                hover:bg-btp-accent-600 transition-all group"
-            >
-              Voir Plus de Projets
-              <ChevronRight 
-                className="ml-2 group-hover:translate-x-1 transition-transform" 
-                size={24} 
+            <div className="relative group">
+              <img 
+                src={item.mainImage} 
+                alt={item.title} 
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
               />
-            </motion.button>
-          </motion.div>
-        )}
+              <button 
+                onClick={() => openModal(index)}
+                className="absolute top-4 right-4 bg-white/60 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+              >
+                <Camera className="text-gray-800 w-6 h-6" />
+              </button>
+            </div>
+            <div className="p-4">
+            
+              <p className="text-btp-secondary-500">{item.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Enhanced Image Modal with Detailed Animations */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center 
-              bg-black/80 backdrop-blur-sm p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.7, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.7, opacity: 0 }}
-              transition={{ 
-                type: "spring", 
-                stiffness: 300, 
-                damping: 20 
-              }}
-              className="relative max-w-full max-h-full"
-              onClick={(e) => e.stopPropagation()}
+      {/* Modal Carousel */}
+      {selectedItemIndex !== null && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 overflow-hidden">
+          <div className="relative w-full max-w-6xl h-[90vh] flex flex-col">
+            {/* Close Button */}
+            <button 
+              onClick={closeModal}
+              className="self-end mb-4 text-white hover:text-gray-300 transition-colors"
             >
-              <img 
-                src={selectedImage} 
-                alt="Projet agrandi" 
-                className="max-w-full max-h-[90vh] object-contain 
-                  rounded-2xl shadow-2xl"
-              />
-              <motion.button
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setSelectedImage(null)}
-                className="absolute -top-12 right-0 bg-white/20 backdrop-blur-sm 
-                  text-white p-2 rounded-full hover:bg-white/40 transition-all"
+              <X size={32} />
+            </button>
+
+            {/* Image Container */}
+            <div className="flex-grow relative flex items-center justify-center overflow-hidden">
+              {/* Image Wrapper */}
+              <div className="max-w-full max-h-full flex items-center justify-center relative w-full h-full">
+                <img 
+                  src={items[selectedItemIndex].images[currentImageIndex]} 
+                  alt={`Image ${currentImageIndex + 1}`}
+                  className="max-w-full max-h-full object-contain"
+                />
+
+                {/* Mobile Navigation */}
+                <button 
+                  onClick={handlePrev}
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2 
+                    bg-white/50 hover:bg-white/75 rounded-full p-2 
+                    transition-all duration-300 md:hidden"
+                >
+                  <ChevronLeft className="text-gray-800 w-6 h-6" />
+                </button>
+
+                <button 
+                  onClick={handleNext}
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 
+                    bg-white/50 hover:bg-white/75 rounded-full p-2 
+                    transition-all duration-300 md:hidden"
+                >
+                  <ChevronRight className="text-gray-800 w-6 h-6" />
+                </button>
+              </div>
+
+              {/* Desktop Navigation */}
+              <button 
+                onClick={handlePrev}
+                className="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 
+                  bg-white/50 hover:bg-white/75 rounded-full p-2 
+                  transition-all duration-300"
               >
-                <X size={24} />
-              </motion.button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </section>
+                <ChevronLeft className="text-gray-800 w-8 h-8" />
+              </button>
+
+              <button 
+                onClick={handleNext}
+                className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 
+                  bg-white/50 hover:bg-white/75 rounded-full p-2 
+                  transition-all duration-300"
+              >
+                <ChevronRight className="text-gray-800 w-8 h-8" />
+              </button>
+            </div>
+
+            {/* Progress Indicators */}
+            <div className="mt-4 flex justify-center space-x-2">
+              {items[selectedItemIndex].images.map((_, index) => (
+                <div 
+                  key={index} 
+                  className={`w-3 h-3 rounded-full 
+                    ${index === currentImageIndex ? 'bg-white' : 'bg-white/50'}
+                    transition-all duration-300`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
+};
+
+// Example Usage
+const ProjectsSection = () => {
+  const galleryItems = [
+    {
+      title: "Projet 1",
+      description: "Projet de construction d'un bâtiment de type R+2",
+      mainImage: image1,
+      images: [
+        image1, image11
+      ]
+    },
+    {
+      title: "Projet 2", 
+      description: "Projet de construction d'un bâtiment de type R+1",
+      mainImage: image2,
+      images: [
+        image2, image21
+      ]
+    },
+    {
+      title: "Projet 3", 
+      description: "Projet de construction d'un bâtiment de type R+1",
+      mainImage: image6,
+      images: [
+        image6, image61,image62,image63,image64,image65
+      ]
+    },
+    {
+      title: "Projet 4", 
+      description: "Projet de construction d'un bâtiment de type R+2",
+      mainImage: image5,
+      images: [
+        image5, image51,image52
+      ]
+    },
+    {
+      title: "Projet 5", 
+      description: "Projet de construction d'un bâtiment de type R+2",
+      mainImage: image3,
+      images: [
+        image3, image31
+      ]
+    },
+    {
+      title: "Projet 6", 
+      description: "Projet de construction d'un bâtiment de type R+1",
+      mainImage: image4,
+      images: [
+        image4
+      ]
+    },
+    {
+      title: "Projet 7", 
+      description: "Projet de construction d'un bâtiment de type R+2",
+      mainImage: image41,
+      images: [
+        image41, image42
+      ]
+    },
+  
+   
+    {
+      title: "Projet 8", 
+      description: "Projet de construction d'un bâtiment de type R+1",
+      mainImage: image7,
+      images: [
+        image7, image71
+      ]
+    },
+    {
+      title: "Projet 9", 
+      description: "Projet de construction d'un showroom pour le compte de la société ATINGAN SA",
+      mainImage: image8,
+      images: [
+        image8, 
+      ]
+    },
+  ];
+
+  return (
+
+    <>
+    <motion.div
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         className="text-center mb-12 mt-2"
+       >
+         <h1 className="text-5xl font-display font-bold text-btp-primary-700 mb-4">
+           Nos Projects
+         </h1>
+         <p className="max-w-2xl mx-auto text-btp-secondary-700">
+           Découvrez une sélection de nos projets les plus remarquables, 
+           témoignant de notre expertise et de notre passion pour la construction.
+         </p>
+       </motion.div>
+       <GalleryModalCarousel items={galleryItems} />;
+   </>
+  )
+  
+ 
+  
+ 
 };
 
 export default ProjectsSection;

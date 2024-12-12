@@ -133,7 +133,7 @@ const ProjectsPage = () => {
 
   return (
     <>
-    <Helmet title="Nos Réalisations" subTitle="Découvrez nos projets et nos réalisations" />
+    <Helmet title="Nos Projects" subTitle="Découvrez nos projets" />
     <div className="container mx-auto py-16 px-4">
     <ProjectsSection/>
     </div>

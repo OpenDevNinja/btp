@@ -11,7 +11,7 @@ const Action = () => {
   };
   
   const handleProjet = () => {
-    navigate('/projects'); 
+    navigate('/realisations'); 
   };
 
   return (
@@ -48,7 +48,7 @@ const Action = () => {
             whileTap={{ scale: 0.9 }}
             className="w-full sm:w-auto border-2 border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition"
           >
-            Nos Projets <Star className="inline ml-2" />
+            Nos Réalisations <Star className="inline ml-2" />
           </motion.button>
         </div>
       </div>
