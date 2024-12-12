@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/logo.png'
+import logo from '../assets/sme_lg.png'
 const MainHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
