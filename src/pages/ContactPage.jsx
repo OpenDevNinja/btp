@@ -9,6 +9,7 @@ import {
   MessageCircle 
 } from 'lucide-react';
 import Helmet from '../components/Helmet';
+import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -20,17 +21,46 @@ const ContactPage = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prevState => ({
+      ...prevState,
       [name]: value
     }));
   };
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log(formData);
+
+    try {
+      // Replace these with your actual EmailJS credentials
+      const result = await emailjs.send(
+        'service_0yorrla',     // EmailJS Service ID
+        'template_cnvckdi',    // EmailJS Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone || 'Non fourni',
+          message: formData.message
+        },
+        'xNgRzxJbydxtJPaAt'      // EmailJS Public Key
+      );
+
+      // Reset form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+
+      // Optional: Show success message
+      alert('Message envoyé avec succès !');
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi du message:', error);
+      alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+    }
   };
+
 
   return (
     <>
