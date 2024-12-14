@@ -97,7 +97,7 @@ const HomeHero = () => {
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-3 rounded-full"
             >
-              Nos Projects
+              Nos Projets
             </motion.button>
           </motion.div>
 

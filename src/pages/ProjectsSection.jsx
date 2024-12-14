@@ -243,7 +243,7 @@ const ProjectsSection = () => {
         className="text-center mb-12 mt-2"
       >
         <h1 className="text-5xl font-display font-bold text-btp-primary-700 mb-4">
-          Nos Projects
+          Nos Projets
         </h1>
         <p className="max-w-2xl mx-auto text-btp-secondary-700">
           Découvrez une sélection de nos projets les plus remarquables, 

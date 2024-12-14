@@ -16,7 +16,7 @@ const MainHeader = () => {
     { name: 'À propos', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Réalisations', path: '/realisations' },
-    { name: 'Projects', path: '/projects' },
+    { name: 'Projets', path: '/projects' },
     { name: 'Contact', path: '/contact' },
   ];
 
