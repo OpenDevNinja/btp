@@ -178,26 +178,30 @@ const ProjectsSection = () => {
     {
       title: "Projet 1",
       description: "Projet de construction d'un bâtiment de type R+2",
-      mainImage: image1,
-      images: [image1, image11]
+      mainImage: image11,
+      images: [image11]
+     
     },
     {
       title: "Projet 2", 
       description: "Projet de construction d'un bâtiment de type R+1",
       mainImage: image2,
-      images: [image2, image21]
+      images: [image2]
+      
     },
     {
       title: "Projet 3", 
-      description: "Projet de construction d'un bâtiment de type R+1",
-      mainImage: image6,
-      images: [image6, image61, image62, image63, image64, image65]
+      description: "Projet de construction d'un bâtiment de type R+2",
+      mainImage: image31,
+      images: [image31]
     },
+   
     {
       title: "Projet 4", 
       description: "Projet de construction d'un bâtiment de type R+2",
       mainImage: image5,
-      images: [image5, image51, image52]
+      images: [image5]
+      
     },
     {
       title: "Projet 5", 
@@ -214,8 +218,8 @@ const ProjectsSection = () => {
     {
       title: "Projet 7", 
       description: "Projet de construction d'un bâtiment de type R+2",
-      mainImage: image41,
-      images: [image41, image42]
+      mainImage: image42,
+      images: [ image42]
     },
     {
       title: "Projet 8", 
@@ -254,7 +258,7 @@ const ProjectsSection = () => {
       <GalleryModalCarousel items={galleryItems.slice(0, visibleProjects)} />
       
       {visibleProjects < galleryItems.length && (
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-2 mb-4">
           <motion.button
             onClick={handleSeeMore}
             whileHover={{ scale: 1.05 }}

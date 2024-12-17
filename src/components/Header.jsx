@@ -29,10 +29,13 @@ const MainHeader = () => {
     >
       <div className="container mx-auto flex justify-between items-center py-4 px-4">
         {/* Logo */}
-        <Link to="/" className="text-3xl flex  flex-row items-center justify-center font-display font-bold text-btp-primary-500">
-          <img src={logo} alt="logo" className="w-10 h-10 mr-2" />
-          <span>SM Enterprise</span>
-        </Link>
+        <Link to="/" className="text-3xl flex flex-col items-center justify-center font-display font-bold text-btp-primary-500">
+  <div className="flex items-center">
+    <img src={logo} alt="logo" className="w-10 h-10 mr-2" />
+    <span>SM Enterprise</span>
+  </div>
+  <p className="text-sm font-normal text-[#0b82ba]  mt-1">Entreprise de Construction Générale</p>
+</Link>
 
         {/* Navigation Desktop */}
         <nav className="hidden md:flex space-x-6">

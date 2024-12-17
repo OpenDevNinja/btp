@@ -34,7 +34,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Colonne Entreprise */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">SM Enterprise</h3>
+            <h3 className="text-2xl font-bold mb-4">SM Enterprise <br />
+            <span className="text-sm font-normal ">Entreprise de Construction Générale</span>
+
+            </h3>
+           
             <p className="text-btp-secondary-100">
               Votre partenaire de confiance en construction et travaux publics. 
               Nous transformons vos projets en réalités durables.

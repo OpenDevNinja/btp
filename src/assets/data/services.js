@@ -1,3 +1,10 @@
+
+import imgService1 from "../image/img/v.jpg";
+import imgService2 from "../image/img/sryry.jpg";
+import imgService3 from "../image/img/A.png";
+import imgService4 from "../image/img/img.jpg";
+import imgService5 from "../image/image_6.jpg";
+
 const services = [
     {
         slug: "conception-architecturale",
@@ -11,14 +18,15 @@ const services = [
             "Conformité aux normes réglementaires"
         ],
         process: [
-            "Consultation initiale et collecte des besoins",
+            "Consultation avec le maître d'ouvrage pour le recueil des idées afin d'établir le programme architectural, visite du site et vérification du domaine.",
             "Études préliminaires et esquisses",
             "Développement des plans détaillés",
             "Validation et ajustements",
-            "Livraison des plans finaux"
+            "Livraison de l'avant-projet détaillé (APD)"
         ],
         bgColor: "bg-indigo-50",
-        accentColor: "text-indigo-600"
+        accentColor: "text-indigo-600",
+        imgSrc: imgService2,
     },
     {
         slug: "etude-de-projets",
@@ -32,14 +40,15 @@ const services = [
             "Conseil stratégique personnalisé"
         ],
         process: [
-            "Analyse préliminaire du projet",
-            "Évaluation technique et économique",
-            "Identification des opportunités et défis",
-            "Recommandations stratégiques",
-            "Rapport détaillé et recommandations"
+            "Étude géotechnique du sol devant aboutir au projet.",
+            "Études de structure.",
+            "Évaluation financière du projet.",
+        
+            "Rapport détaillé et recommandations stratégiques" 
         ],
         bgColor: "bg-teal-50",
-        accentColor: "text-teal-600"
+        accentColor: "text-teal-600",
+        imgSrc: imgService1,
     },
     {
         slug: "construction-btp",
@@ -54,13 +63,14 @@ const services = [
         ],
         process: [
             "Analyse des besoins spécifiques",
-            "Planification détaillée",
+            "Planification et réalisation du planning des travaux.",
             "Préparation du terrain",
             "Exécution des travaux",
             "Contrôle qualité et réception"
         ],
         bgColor: "bg-yellow-50",
-        accentColor: "text-yellow-600"
+        accentColor: "text-yellow-600",
+        imgSrc: imgService3,
     },
     {
         slug: "assistance-conseils",
@@ -81,7 +91,8 @@ const services = [
             "Bilan et optimisation continue"
         ],
         bgColor: "bg-green-50",
-        accentColor: "text-green-600"
+        accentColor: "text-green-600",
+        imgSrc: imgService4,
     },
     {
         slug: "topographie",

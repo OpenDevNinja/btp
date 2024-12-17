@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 
 
-import sideImage from '../assets/image/img/fg.jpeg'
+import sideImage from '../assets/image/img/b.jpg'
 
 const DevisForm = () => {
   const [formData, setFormData] = useState({
@@ -80,7 +80,7 @@ const DevisForm = () => {
             className="w-full h-full object-cover" 
           />
         </div>
-        <div className="p-12 text-center flex flex-col justify-center">
+        <div className="p-10 text-center flex flex-col justify-center">
           <CheckCircle2 
             size={80} 
             className="mx-auto text-btp-accent-500 mb-6" 
@@ -105,7 +105,7 @@ const DevisForm = () => {
   }
 
   return (
-    <div className="bg-btp-primary-50 py-16">
+    <div className="bg-btp-primary-50 py-10">
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ const DevisForm = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-1">
               <div>
                 <label className="block text-btp-secondary-700 font-semibold mb-2">
                   Catégorie du Projet

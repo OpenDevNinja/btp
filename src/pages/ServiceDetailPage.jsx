@@ -66,7 +66,7 @@ const ServiceDetailPage = () => {
                     className="relative mb-16 rounded-3xl overflow-hidden shadow-btp-hover"
                 >
                     <img 
-                        src={hero} 
+                        src={service.imgSrc} 
                         alt={service.title} 
                         className="w-full h-[500px] object-cover transition-transform duration-300 hover:scale-105"
                     />
