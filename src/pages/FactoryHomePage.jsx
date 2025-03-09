@@ -67,7 +67,7 @@ const ConstructionServicesPage = () => {
                général. <br /> 
               Notre état d'esprit est orienté vers la complémentarité de chacun des acteurs de notre société
               afin d'aquérir et de renforcer nos compétences techniques. 
-            
+      
             </p>
             
             <ServiceIcons />

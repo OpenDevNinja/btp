@@ -191,7 +191,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Projet 8", 
-      description: "Projet de construction d'un bâtiment de type R+2",
+      description: "Projet de construction d'un bâtiment de type R+1",
       mainImage: image88,
       images: [image88]
       
@@ -205,7 +205,7 @@ const ProjectsSection = () => {
   
     {
       title: "Projet 4", 
-      description: "Projet de construction d'un bâtiment de type R+2",
+      description: "Projet de construction d'un bâtiment de type R+1",
       mainImage: image44,
       images: [image44]
       
