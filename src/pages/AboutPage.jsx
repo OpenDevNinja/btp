@@ -51,11 +51,14 @@ const AboutSMEntreprise = () => {
               SM Entreprise
             </h2>
             <p className="text-btp-secondary-500 leading-relaxed">
-              SM Entreprise est une entreprise de construction générale spécialisée 
+              SM ENTERPRISE est une entreprise de construction générale spécialisée 
               dans la construction immobilière et tous les travaux de génie civil. 
-              Nous travaillons pour le compte des particuliers et des professionnels, 
-              avec une dynamique basée sur des compétences multiples et un réseau 
-              solide de partenaires dans le domaine de la construction.
+              Nous travaillons pour le compte de particuliers et des professionnels, et notre 
+              entreprise se développe sur une dynamique de multiples compétences ayant une force 
+               réseau comptant différents partenaires de le domaine de la construction et génie civil en 
+               général. <br /> <br />
+              Notre état d'esprit est orienté vers la complémentarité de chacun des acteurs de notre société
+              afin d'aquérir et de renforcer nos compétences techniques. 
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">

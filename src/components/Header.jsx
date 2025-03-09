@@ -27,7 +27,7 @@ const MainHeader = () => {
       transition={{ duration: 0.6 }}
       className="bg-white shadow-md sticky top-0 z-50"
     >
-      <div className="container mx-auto flex justify-between items-center py-4 px-4">
+      <div className="container mx-auto flex justify-between items-center py-2 px-4">
         {/* Logo */}
         <Link to="/" className="text-3xl flex flex-col items-center justify-center font-display font-bold text-btp-primary-500">
   <div className="flex items-center">

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { Camera, ChevronLeft, ChevronRight, X } from 'lucide-react';
-import image1 from '../assets/image/img/2.jpg';
+import image44 from '../assets/image/img/4r4.jpeg';
 import image11 from '../assets/image/img/1.jpg';
 import image2 from '../assets/image/img/C1.jpg';
-import image21 from '../assets/image/img/C.jpeg';
+import image88 from '../assets/image/img/8r8.jpeg';
 import image6 from '../assets/image/img/v1A1.jpg';
 import image61 from '../assets/image/img/v1A2.jpg';
 import image62 from '../assets/image/img/v1A3.jpg';
@@ -192,22 +192,22 @@ const ProjectsSection = () => {
     {
       title: "Projet 3", 
       description: "Projet de construction d'un bâtiment de type R+2",
-      mainImage: image31,
-      images: [image31]
+      mainImage: image3,
+      images: [image3, image31]
     },
-   
+  
     {
       title: "Projet 4", 
       description: "Projet de construction d'un bâtiment de type R+2",
-      mainImage: image5,
-      images: [image5]
+      mainImage: image44,
+      images: [image44]
       
     },
     {
       title: "Projet 5", 
       description: "Projet de construction d'un bâtiment de type R+2",
-      mainImage: image3,
-      images: [image3, image31]
+      mainImage: image42,
+      images: [ image42]
     },
     {
       title: "Projet 6", 
@@ -215,24 +215,42 @@ const ProjectsSection = () => {
       mainImage: image4,
       images: [image4]
     },
+
     {
       title: "Projet 7", 
       description: "Projet de construction d'un bâtiment de type R+2",
-      mainImage: image42,
-      images: [ image42]
+      mainImage: image5,
+      images: [image5]
+      
     },
     {
       title: "Projet 8", 
+      description: "Projet de construction d'un bâtiment de type R+2",
+      mainImage: image88,
+      images: [image88]
+      
+    },
+  
+   
+    {
+      title: "Projet 9", 
       description: "Projet de construction d'un bâtiment de type R+1",
       mainImage: image7,
       images: [image7, image71]
     },
     {
-      title: "Projet 9", 
+      title: "Projet 10", 
       description: "Projet de construction d'un showroom pour le compte de la société ATINGAN SA",
       mainImage: image8,
       images: [image8]
     },
+    {
+      title: "Projet 11",
+      description: "",
+      mainImage: image8,  
+
+
+    }
   ];
 
   const handleSeeMore = () => {

@@ -59,14 +59,15 @@ const ConstructionServicesPage = () => {
               QUI SOMMES NOUS ?
             </h1>
             <p className="text-btp-secondary-700 text-lg mb-6">
-              SM Entreprise est une entreprise de construction générale spécialisée dans 
-              la construction immobilière et tous les travaux de génie civil.
-              Nous travaillons pour le compte des particuliers, de professionnels 
-              et notre entreprise se développe sur une dynamique de multiples 
-              compétence ayant une force de réseau comptant différents partenaires dans le domaine 
-              de la construction et génie civil en général.
-              Notre état d'esprit est orienté vers la complémentarité de chacun des acteurs de notre 
-              société afin d'acquérir et de renforcer nos compétences techniques.
+            SM ENTERPRISE est une entreprise de construction générale spécialisée 
+              dans la construction immobilière et tous les travaux de génie civil. 
+              Nous travaillons pour le compte de particuliers et des professionnels, et notre 
+              entreprise se développe sur une dynamique de multiples compétences ayant une force 
+               réseau comptant différents partenaires de le domaine de la construction et génie civil en 
+               général. <br /> 
+              Notre état d'esprit est orienté vers la complémentarité de chacun des acteurs de notre société
+              afin d'aquérir et de renforcer nos compétences techniques. 
+            
             </p>
             
             <ServiceIcons />

@@ -4,6 +4,7 @@ import imgService2 from "../image/img/sryry.jpg";
 import imgService3 from "../image/img/A.png";
 import imgService4 from "../image/img/img.jpg";
 import imgService5 from "../image/image_6.jpg";
+import { img } from "framer-motion/client";
 
 const services = [
     {
@@ -40,7 +41,7 @@ const services = [
             "Conseil stratégique personnalisé"
         ],
         process: [
-            "Étude géotechnique du sol devant aboutir au projet.",
+            "Étude géotechnique du sol.",
             "Études de structure.",
             "Évaluation financière du projet.",
         
@@ -113,7 +114,8 @@ const services = [
             "Rapport et recommandations"
         ],
         bgColor: "bg-purple-50",
-        accentColor: "text-purple-600"
+        accentColor: "text-purple-600",
+        imgSrc: imgService1,
     },
     {
         slug: "renovation-rehabilitation",
@@ -134,7 +136,8 @@ const services = [
             "Finitions et mise aux normes"
         ],
         bgColor: "bg-blue-50",
-        accentColor: "text-blue-600"
+        accentColor: "text-blue-600",
+        imgSrc: imgService5,
     },
     
 ];
