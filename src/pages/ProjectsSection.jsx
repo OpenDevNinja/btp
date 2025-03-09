@@ -5,7 +5,7 @@ import { Camera, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import image44 from '../assets/image/img/4r4.jpeg';
 import image11 from '../assets/image/img/1.jpg';
 import image2 from '../assets/image/img/C1.jpg';
-import image88 from '../assets/image/img/8r8.jpeg';
+import image88 from '../assets/image/img/new.jpeg';
 import image6 from '../assets/image/img/v1A1.jpg';
 import image61 from '../assets/image/img/v1A2.jpg';
 import image62 from '../assets/image/img/v1A3.jpg';
@@ -190,6 +190,13 @@ const ProjectsSection = () => {
       
     },
     {
+      title: "Projet 8", 
+      description: "Projet de construction d'un bâtiment de type R+2",
+      mainImage: image88,
+      images: [image88]
+      
+    },
+    {
       title: "Projet 3", 
       description: "Projet de construction d'un bâtiment de type R+2",
       mainImage: image3,
@@ -223,13 +230,7 @@ const ProjectsSection = () => {
       images: [image5]
       
     },
-    {
-      title: "Projet 8", 
-      description: "Projet de construction d'un bâtiment de type R+2",
-      mainImage: image88,
-      images: [image88]
-      
-    },
+ 
   
    
     {
@@ -244,13 +245,7 @@ const ProjectsSection = () => {
       mainImage: image8,
       images: [image8]
     },
-    {
-      title: "Projet 11",
-      description: "",
-      mainImage: image8,  
-
-
-    }
+   
   ];
 
   const handleSeeMore = () => {

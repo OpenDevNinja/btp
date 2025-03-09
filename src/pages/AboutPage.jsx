@@ -52,7 +52,7 @@ const AboutSMEntreprise = () => {
             </h2>
             <p className="text-btp-secondary-500 leading-relaxed">
               SM ENTERPRISE est une entreprise de construction générale spécialisée 
-              dans la construction immobilière et tous les travaux de génie civil. 
+              dans la construction immobilière et dans tous les travaux de génie civil. 
               Nous travaillons pour le compte de particuliers et des professionnels, et notre 
               entreprise se développe sur une dynamique de multiples compétences ayant une force 
                réseau comptant différents partenaires de le domaine de la construction et génie civil en 
