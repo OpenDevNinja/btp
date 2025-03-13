@@ -45,29 +45,32 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 mt-6">
               <motion.a 
-                href="#" 
+                href="https://www.facebook.com/share/169GghdkcB/?mibextid=wwXIfr" 
                 whileHover={{ scale: 1.2 }}
+                target='_blank'
                 className="text-white hover:text-btp-accent-300"
               >
                 <Facebook size={24} />
               </motion.a>
-              <motion.a 
+            {/*   <motion.a 
                 href="#" 
                 whileHover={{ scale: 1.2 }}
                 className="text-white hover:text-btp-accent-300"
               >
                 <Twitter size={24} />
-              </motion.a>
+              </motion.a> */}
               <motion.a 
-                href="#" 
+                href="http://linkedin.com/in/mulero-smith-b710b1175" 
+                target='_blank'
                 whileHover={{ scale: 1.2 }}
                 className="text-white hover:text-btp-accent-300"
               >
                 <Linkedin size={24} />
               </motion.a>
               <motion.a 
-                href="#" 
+                href="https://www.instagram.com/smenterprise30?igsh=MWxtNTBjMXIyMXJsMg%3D%3D&utm_source=qr" 
                 whileHover={{ scale: 1.2 }}
+                target='_blank'
                 className="text-white hover:text-btp-accent-300"
               >
                 <Instagram size={24} />
