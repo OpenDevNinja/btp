@@ -23,21 +23,24 @@ const TopHeader = () => {
         </div>
         <div className="flex space-x-4">
           <a 
-            href="#" 
+            href="http://linkedin.com/in/mulero-smith-b710b1175"  
+            target='_blank'
             className="text-btp-accent-300  hover:text-white transition flex items-center"
             aria-label="LinkedIn"
           >
             <Linkedin className="w-5 h-5" />
           </a>
           <a 
-            href="#" 
+        href="https://www.facebook.com/share/169GghdkcB/?mibextid=wwXIfr" 
+            target='_blank'
             className="text-btp-accent-300  hover:text-white transition flex items-center"
             aria-label="Facebook"
           >
             <Facebook className="w-5 h-5" />
           </a>
           <a 
-            href="#" 
+           href="https://www.instagram.com/smenterprise30?igsh=MWxtNTBjMXIyMXJsMg%3D%3D&utm_source=qr" 
+            target='_blank'
             className="text-btp-accent-300  hover:text-white transition flex items-center"
             aria-label="Instagram"
           >
